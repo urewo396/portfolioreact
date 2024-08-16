@@ -28,8 +28,8 @@ function App() {
         </div>
       </nav>
       <main>
-        <h1>Hey, I'm Max and this is my Portfolio</h1>
-        <p>I'm a student that want to become a software developer some day and this site is to showcase my projects.</p>
+        <h1>Hi, I'm Max and this is my Portfolio</h1>
+        <p>I'm a student that wants to become a software developer and this site is to showcase my projects.</p>
         <a href="#projects" className="btn">View My Projects</a>
       </main>
     </div>
