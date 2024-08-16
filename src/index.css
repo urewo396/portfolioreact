@@ -1,0 +1,151 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a1a2b, #112d4e, #1b3a57); /* Darker blue gradient */
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none; /* Hide default cursor */
+    position: relative;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    padding: 15px 20px; /* Adjust padding to fit within the screen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Border to enhance glass effect */
+    position: fixed; /* Fixed to the top of the screen */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+/* Title in the navbar */
+.navbar-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Navigation links */
+.navbar-links {
+    display: flex;
+    gap: 15px; /* Adjust gap to fit links within the screen */
+}
+
+.navbar-link {
+    color: #1abc9c;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #16a085;
+}
+
+/* Main content area */
+main {
+    padding: 100px 20px 40px; /* Padding to ensure content is below navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Border to enhance glass effect */
+    position: absolute; /* Centered content */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset for true center alignment */
+    max-width: 800px; /* Maximum width */
+    width: 100%; /* Responsive width */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Styling for text elements */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #dddddd;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #16a085;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #1abc9c;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #16a085;
+}
+
+/* Cursor glow effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.2), transparent 80%);
+    pointer-events: none;
+    z-index: 5; /* Behind the glass effect */
+    transition: background 0.1s ease;
+}
+
+body:hover::before {
+    background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.3), transparent 80%);
+}
+
+/* Custom cursor dot */
+body::after {
+    content: '';
+    position: fixed;
+    top: var(--y);
+    left: var(--x);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 15; /* Above everything */
+    transform: translate(-50%, -50%); /* Center the dot */
+    transition: background-color 0.3s ease;
+}
+
+body:hover::after {
+    background-color: rgba(255, 255, 255, 0.8);
+}
